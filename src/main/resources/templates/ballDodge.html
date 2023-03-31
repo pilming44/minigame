@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>피하기</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      @media (max-width: 767px) {
+        #game-canvas {
+          width: 100%;
+          height: 50vh;
+        }
+      }
+      #game-canvas {
+        position: relative;
+        border: 1px solid #ccc;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        flex-direction: column;
+        color: white;
+        background-color: black;
+      }
+      .game-container {
+        margin-top: 50px;
+      }
+      .keypad-container {
+        margin-top: 10px;
+      }
+      h3 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .arrow-keys {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 120px;
+      }
+      .arrow-up, .arrow-down {
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 15px 20px 15px;
+      }
+
+      .arrow-up {
+        border-color: transparent transparent #000 transparent;
+      }
+
+      .arrow-down {
+        border-color: #000 transparent transparent transparent;
+        border-width: 20px 15px 0 15px;
+      }
+
+      .arrow-left, .arrow-right {
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 15px 20px 15px 0;
+      }
+
+      .arrow-left {
+        border-color: transparent #000 transparent transparent;
+      }
+
+      .arrow-right {
+        border-color: transparent transparent transparent #000;
+        border-width: 15px 0 15px 20px;
+      }
+
+      #start {
+        width: 200px;
+        height: 50px;
+        font-size: 20px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="game-container">
+      <canvas id="game-canvas" width="400" height="400"></canvas>
+    </div>
+    <div><button id="start">start</button></div>
+    <div class="keypad-container">
+      <table>
+        <tr>
+          <td><button id ="leftArrow"><img src="/img/left.png" alt="이미지 설명"></button></td>
+          <td></td>
+          <td><button id ="rightArrow"><img src=/img/right.png" alt="이미지 설명"></button></td>
+        </tr>
+      </table>
+    </div>
+    <script src="/js/ballDodge.js"></script>
+  </body>
+</html>
