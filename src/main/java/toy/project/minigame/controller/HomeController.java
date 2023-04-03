@@ -2,7 +2,6 @@ package toy.project.minigame.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
  * fileName : HomeController
@@ -25,5 +24,10 @@ public class HomeController {
     @GetMapping("/ballDodge")
     public String ballDodge() {
         return "ballDodge";
+    }
+
+    @GetMapping("/flappyBird")
+    public String flappyBird() {
+        return "flappyBird";
     }
 }
