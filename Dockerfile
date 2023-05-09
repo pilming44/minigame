@@ -6,6 +6,6 @@ COPY build/libs/minigame-0.0.1-SNAPSHOT.jar /app.jar
 # 애플리케이션 실행
 CMD ["java", "-jar", "/app.jar"]
 
-#실행순서
+#실행순서 참고
 #이미지 빌드(도커파일 경로에서 실행) docker build -t minigame .
 #컨테이너 실행docker run -d -p 9999:8080 minigame
